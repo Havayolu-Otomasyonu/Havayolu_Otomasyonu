@@ -1,0 +1,171 @@
+.facilities-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f4f7fa 0%, #e8f0f8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .facilities-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+    opacity: 0.5;
+  }
+  
+  .facilities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .facilities-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #2a4365;
+    font-size: 2.75rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .facilities-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0077ff, #00c6ff);
+    border-radius: 2px;
+  }
+  
+  .facilities-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #4a5568;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+  }
+  
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+  }
+  
+  .facility-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    text-align: center;
+  }
+  
+  .facility-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .facility-card:hover .card-icon {
+    transform: scale(1.1);
+  }
+  
+  .card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .card-description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .card-hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 119, 255, 0.1) 0%, rgba(0, 198, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .facility-card:hover .card-hover-effect {
+    opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .facilities-section {
+      padding: 60px 0;
+    }
+    
+    .facilities-title {
+      font-size: 2rem;
+    }
+    
+    .facilities-subtitle {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+    
+    .cards-wrapper {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .facility-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  .facility-card:nth-child(1) { animation-delay: 0.1s; }
+  .facility-card:nth-child(2) { animation-delay: 0.2s; }
+  .facility-card:nth-child(3) { animation-delay: 0.3s; }
+  .facility-card:nth-child(4) { animation-delay: 0.4s; }
+  .facility-card:nth-child(5) { animation-delay: 0.5s; }

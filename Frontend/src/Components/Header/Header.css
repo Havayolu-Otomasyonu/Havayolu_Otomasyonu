@@ -1,0 +1,80 @@
+/* Header genel stil */
+.header {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1e1e2f; /* Koyu tonlar */
+    color: #ffffff;
+    margin: 0;
+    border-bottom: 2px solid #444; /* Header altına ince çizgi */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    position: sticky;
+    top: 0; /* Sayfa kaydırıldığında sabit kalması için */
+    z-index: 1000;
+  }
+  
+  /* Navigasyon Linkleri */
+  .nav-links {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #f9f9f9; /* Açık beyaz */
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links li {
+    display: inline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li:hover {
+    color: #00aaff; /* Mavi hover efekti */
+    transform: translateY(-2px); /* Hoverda hafif yukarı kayma */
+  }
+  
+  /* Dropdown ve Airports Tag */
+  .airports-tag {
+    margin-left: auto;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  bl-dropdown {
+    background-color: #444; /* Koyu zemin */
+    border-radius: 5px;
+    border: 1px solid #666; /* İnce border */
+  }
+  
+  bl-dropdown-label {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  bl-dropdown-item {
+    font-size: 1rem;
+    color: #333333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  bl-dropdown-item:hover {
+    background-color: #1e1e2f; /* Hoverda koyu ton */
+    color: #00aaff; /* Mavi renk */
+  }
+  
+  bl-dropdown-group {
+    background-color: #f9f9f9; /* Açılır menü arka planı */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
