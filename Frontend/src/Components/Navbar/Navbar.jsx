@@ -18,7 +18,7 @@ const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Uçuşlar");
   const [adminDropdownOpen, setAdminDropdownOpen] = useState(false);
 
-  // Nav items'ı route bilgileri ile genişlettik
+  
   const navItems = [
     { 
       name: "Uçuşlar", 
@@ -74,7 +74,7 @@ const Navbar = () => {
             onClick={handleAdminDropdownToggle}
           >
             <FiUser className="nav-icon" />
-            <span>Admin</span>
+            <span>Kullanıcı</span>
             <FiChevronDown
               className={`dropdown-icon ${adminDropdownOpen ? "rotate" : ""}`}
             />
@@ -89,13 +89,7 @@ const Navbar = () => {
                 <FiSettings className="item-icon" />
                 <span>Admin Paneli</span>
               </div>
-              <div 
-                className="dropdown-item"
-                onClick={() => navigate("/user-mode")}
-              >
-                <FiUser className="item-icon" />
-                <span>Kullanıcı Modu</span>
-              </div>
+              
             </div>
           )}
         </div>

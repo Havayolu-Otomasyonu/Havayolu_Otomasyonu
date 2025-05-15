@@ -26,7 +26,7 @@ const Flights = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setFlights(data);
+        setFlights(data.slice(0,5));
       })
       .catch((error) => {
         console.error("Veri çekilirken hata oluştu:", error);
@@ -49,7 +49,7 @@ const Flights = () => {
           <AnimatedText text="Hoş Geldiniz" />
         </h1>
         <p className="text-from-bottom">
-          <AnimatedText text="Hava Yolu Otomasyonu" />
+          <AnimatedText text="Hava Limanı Otomasyonu" />
         </p>
       </div>
 

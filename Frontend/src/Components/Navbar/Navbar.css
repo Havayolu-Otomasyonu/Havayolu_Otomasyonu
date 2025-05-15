@@ -55,6 +55,9 @@
   background-clip: text;
   color: transparent;
 }
+.navbar-logo span:hover{
+  cursor: pointer;
+}
 
 /* Desktop Navigation */
 .navbar-links {

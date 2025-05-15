@@ -1,0 +1,416 @@
+.admin-runways-container {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #2d3748;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
+}
+
+.admin-header {
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.admin-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.admin-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  border-radius: 2px;
+}
+
+.admin-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Premium Card Design */
+.admin-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b82f6, #6366f1);
+}
+
+/* Runway Status Panel - Premium Version */
+.runway-status {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.status-header h2 {
+  font-size: 1.6rem;
+  color: #1e293b;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.status-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+.weather-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(59, 130, 246, 0.08);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.weather-icon {
+  font-size: 1.6rem;
+}
+
+.weather-icon.sunny {
+  color: #f59e0b;
+  filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.2));
+}
+
+.weather-icon.cloudy {
+  color: #94a3b8;
+  filter: drop-shadow(0 2px 4px rgba(148, 163, 184, 0.2));
+}
+
+.weather-icon.rainy {
+  color: #3b82f6;
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.2));
+}
+
+.weather-icon.snowy {
+  color: #bfdbfe;
+  filter: drop-shadow(0 2px 4px rgba(191, 219, 254, 0.3));
+}
+
+.weather-text {
+  font-weight: 550;
+  color: #1e293b;
+  font-size: 1.05rem;
+}
+
+/* Enhanced Grid Layout */
+.runway-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.75rem;
+  border: 1px solid #f1f5f9;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b82f6, #6366f1);
+}
+
+.info-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.info-value {
+  font-size: 1.5rem;
+  font-weight: 650;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+/* Premium Form Elements */
+.info-input, .info-select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  margin-top: 0.75rem;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.info-input:focus, .info-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.info-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+/* Premium Badges */
+.surface-badge, .lighting-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.surface-badge.asphalt {
+  background-color: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.surface-badge.concrete {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+}
+
+.surface-badge.grass {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #dcfce7;
+}
+
+.surface-badge.gravel {
+  background-color: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fef08a;
+}
+
+.lighting-badge.evet {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #dcfce7;
+}
+
+.lighting-badge.hayır {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.lighting-badge.kısmi {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+/* Premium Notifications Section */
+.runway-notifications {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+.runway-notifications h3 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-weight: 650;
+  letter-spacing: -0.3px;
+  position: relative;
+}
+
+.runway-notifications h3::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.notification-item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+  align-items: center;
+}
+
+.notification-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.notification-icon.info {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.notification-icon.warning {
+  background-color: #f97316;
+  color: white;
+}
+
+.notification-icon.success {
+  background-color: #10b981;
+  color: white;
+}
+
+.notification-content p {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.notification-time {
+  display: block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+  font-weight: 450;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-card {
+    padding: 2.5rem;
+  }
+  
+  .runway-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-runways-container {
+    padding: 1.5rem;
+  }
+  
+  .admin-header h1 {
+    font-size: 2rem;
+  }
+  
+  .admin-card {
+    padding: 2rem;
+  }
+  
+  .status-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  
+  .weather-display {
+    align-self: flex-start;
+  }
+  
+  .runway-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .notification-item {
+    padding: 1.25rem;
+  }
+}
