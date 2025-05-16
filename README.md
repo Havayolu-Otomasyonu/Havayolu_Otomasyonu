@@ -39,18 +39,18 @@ npm install
 # .env dosyası oluştur
 # DB_HOST=localhost
 # DB_USER=root
-# DB_PASSWORD=******
-# DB_NAME=flight_db
+# DB_PASSWORD=" "
+# DB_NAME=havayolu_otomasyonu
 
 npm start
 
 # 3. Frontend dizinine geç
 cd ../frontend
 npm install
-npm start
+npm run dev
 ```
 
-Tarayıcıda `http://localhost:3000` adresinden uygulamayı görüntüleyebilirsiniz.
+Tarayıcıda `http://localhost:5173` adresinden uygulamayı görüntüleyebilirsiniz.
 
 ---
 
